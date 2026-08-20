@@ -38,8 +38,8 @@ const faqs = [
     a: "We supply a vast range of machine tool accessories including hydraulic machine vises, ER/OZ collets, live centers, clamping kits, rotary tables, universal tilting tables, punch formers, right angle plates, and V-blocks.",
   },
   {
-    q: "Do you supply Vertex machine accessories?",
-    a: "Yes. Vertex is a primary brand we supply for workholding and machine accessories. You can visit our dedicated Vertex brand page for details.",
+    q: "What types of workholding and clamping fixtures are available?",
+    a: "We provide high-precision angle-lock machine vises, modular 52-piece T-slot clamping sets, magnetic workholding blocks, and rotary indexing fixtures engineered for high repetitive accuracy on CNC milling centers.",
   },
   {
     q: "Do you serve machine shops in Riyadh and Jeddah?",
@@ -74,10 +74,10 @@ export default function MachineToolAccessoriesPage() {
                 Request a Quote <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/brands/vertex"
+                href="/tool-holders"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-100 text-zinc-900 font-bold text-sm hover:bg-zinc-200 transition-all"
               >
-                Vertex Tooling
+                Tool Holders & Systems
               </Link>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function MachineToolAccessoriesPage() {
               { label: "Tool Holders", href: "/tool-holders" },
               { label: "Chuck", href: "/chuck" },
               { label: "CNC Tools", href: "/cnc-tools" },
-              { label: "Vertex", href: "/brands/vertex" },
+              { label: "Measuring Instruments", href: "/measuring-instruments" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-zinc-100 text-zinc-700 text-sm font-medium hover:bg-red-50 hover:text-red-600 transition-colors">
                 {l.label} <ArrowRight className="w-3.5 h-3.5" />

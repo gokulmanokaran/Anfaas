@@ -14,7 +14,6 @@ import {
   LifeBuoy,
   Headphones,
   HelpCircle,
-  Wrench,
 } from "lucide-react";
 
 /* ─── Custom Icons ───────────────────────────────────── */
@@ -162,14 +161,6 @@ const navData: NavItem[] = [
     ],
   },
   {
-    label: "Brands",
-    children: [
-      { label: "Vertex", href: "/brands/vertex" },
-      { label: "Kitagawa", href: "/brands/kitagawa" },
-      { label: "Kluber", href: "/brands/kluber" },
-    ],
-  },
-  {
     label: "Locations",
     children: [
       { label: "Dammam HQ", href: "/locations/dammam" },
@@ -206,46 +197,75 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setIsOpen(false), 100);
+    timeoutRef.current = setTimeout(() => setIsOpen(false), 120);
   };
 
   const hasChildren = (item.children && item.children.length > 0) || item.isSupport;
 
   return (
     <div
-      className="relative"
+      className="relative flex items-center"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {item.href ? (
         <Link
           href={item.href}
-          className={`flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all duration-200 w-full ${depth === 0
-            ? `text-[13px] xl:text-sm font-bold ${isOpen ? "text-red-600 bg-red-50" : "text-zinc-800 hover:text-red-600 hover:bg-red-50"}`
-            : `text-sm font-medium whitespace-nowrap justify-between ${isOpen ? "text-red-600 bg-red-50" : "text-zinc-600 hover:text-red-600 hover:bg-red-50"}`
-            }`}
+          className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all duration-200 ${
+            depth === 0
+              ? `text-[13px] xl:text-sm font-semibold tracking-tight ${
+                  isOpen
+                    ? "text-red-600 bg-red-50/90 font-bold"
+                    : "text-zinc-700 hover:text-red-600 hover:bg-red-50/70"
+                }`
+              : `text-sm font-medium whitespace-nowrap justify-between w-full ${
+                  isOpen ? "text-red-600 bg-red-50" : "text-zinc-600 hover:text-red-600 hover:bg-red-50"
+                }`
+          }`}
         >
-          {item.label}
-          {hasChildren && (
-            depth === 0 ? (
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180 text-red-600" : ""}`} />
+          <span>{item.label}</span>
+          {hasChildren &&
+            (depth === 0 ? (
+              <ChevronDown
+                className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
+                  isOpen ? "rotate-180 text-red-600" : "text-zinc-400 group-hover:text-red-600"
+                }`}
+              />
             ) : (
-              <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "text-red-600" : "text-zinc-400"}`} />
-            )
-          )}
+              <ChevronRight
+                className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
+                  isOpen ? "text-red-600" : "text-zinc-400"
+                }`}
+              />
+            ))}
         </Link>
       ) : (
         <button
-          className={`flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all duration-200 w-full ${depth === 0
-            ? `text-[13px] xl:text-sm font-bold ${isOpen ? "text-red-600 bg-red-50" : "text-zinc-800 hover:text-red-600 hover:bg-red-50"}`
-            : `text-sm font-medium whitespace-nowrap justify-between ${isOpen ? "text-red-600 bg-red-50" : "text-zinc-600 hover:text-red-600 hover:bg-red-50"}`
-            }`}
+          className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all duration-200 cursor-pointer ${
+            depth === 0
+              ? `text-[13px] xl:text-sm font-semibold tracking-tight ${
+                  isOpen
+                    ? "text-red-600 bg-red-50/90 font-bold"
+                    : "text-zinc-700 hover:text-red-600 hover:bg-red-50/70"
+                }`
+              : `text-sm font-medium whitespace-nowrap justify-between w-full ${
+                  isOpen ? "text-red-600 bg-red-50" : "text-zinc-600 hover:text-red-600 hover:bg-red-50"
+                }`
+          }`}
         >
-          {item.label}
+          <span>{item.label}</span>
           {depth === 0 ? (
-            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180 text-red-600" : ""}`} />
+            <ChevronDown
+              className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
+                isOpen ? "rotate-180 text-red-600" : "text-zinc-400 group-hover:text-red-600"
+              }`}
+            />
           ) : (
-            <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "text-red-600" : "text-zinc-400"}`} />
+            <ChevronRight
+              className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
+                isOpen ? "text-red-600" : "text-zinc-400"
+              }`}
+            />
           )}
         </button>
       )}
@@ -254,16 +274,23 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, y: depth === 0 ? 10 : 0, x: depth === 0 ? 0 : 10 }}
+              initial={{ opacity: 0, y: depth === 0 ? 8 : 0, x: depth === 0 ? 0 : 8 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
-              exit={{ opacity: 0, y: depth === 0 ? 5 : 0, x: depth === 0 ? 0 : 5 }}
-              transition={{ duration: 0.2 }}
-              className={`absolute ${depth === 0 ? "top-full mt-2" : "top-0"} ${item.isMegaMenu
-                ? `${item.children!.length <= 2 ? "w-[380px]" : "w-[550px]"} bg-white rounded-3xl shadow-[0_32px_120px_rgba(0,0,0,0.15)] border border-zinc-100 p-5 z-50 ${depth === 0 ? "right-0" : "left-full ml-1"}`
-                : item.isSupport
-                  ? `w-[650px] bg-white rounded-3xl shadow-[0_32px_120px_rgba(0,0,0,0.15)] border border-zinc-100 p-6 z-50 right-0`
-                  : `left-0 min-w-[240px] bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-zinc-100 p-2 z-50 ${depth === 0 ? "" : "left-full ml-1"}`
-                }`}
+              exit={{ opacity: 0, y: depth === 0 ? 4 : 0, x: depth === 0 ? 0 : 4 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
+              className={`absolute ${depth === 0 ? "top-full mt-1.5" : "top-0"} ${
+                item.isMegaMenu
+                  ? `${
+                      item.children!.length <= 2 ? "w-[380px]" : "w-[550px]"
+                    } bg-white rounded-3xl shadow-[0_24px_80px_rgba(0,0,0,0.12)] border border-zinc-100 p-5 z-50 ${
+                      depth === 0 ? "left-0" : "left-full ml-1"
+                    }`
+                  : item.isSupport
+                  ? `w-[650px] bg-white rounded-3xl shadow-[0_24px_80px_rgba(0,0,0,0.12)] border border-zinc-100 p-6 z-50 right-0`
+                  : `left-0 min-w-[240px] bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.1)] border border-zinc-100 p-2 z-50 ${
+                      depth === 0 ? "" : "left-full ml-1"
+                    }`
+              }`}
             >
               {item.isMegaMenu ? (
                 <div className={`grid gap-3 ${item.children!.length <= 2 ? "grid-cols-2" : "grid-cols-3"}`}>
@@ -271,21 +298,21 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
                     <Link
                       key={idx}
                       href={child.href || "#"}
-                      className="group flex flex-col gap-2 p-2 rounded-2xl hover:bg-red-50/50 transition-all duration-300 border border-transparent hover:border-red-100"
+                      className="group flex flex-col gap-2 p-2.5 rounded-2xl hover:bg-red-50/50 transition-all duration-300 border border-transparent hover:border-red-100"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="h-20 bg-zinc-50 rounded-xl overflow-hidden flex items-center justify-center p-2 group-hover:bg-white group-hover:shadow-[0_4px_16px_rgba(220,38,38,0.08)] transition-all duration-500">
+                      <div className="h-20 bg-zinc-50 rounded-xl overflow-hidden flex items-center justify-center p-2 group-hover:bg-white group-hover:shadow-[0_4px_16px_rgba(220,38,38,0.08)] transition-all duration-300">
                         {child.image ? (
                           <Image
                             src={child.image}
                             alt={child.label}
                             width={100}
                             height={100}
-                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           />
                         ) : (
                           <div className="flex flex-col items-center justify-center text-zinc-300">
-                            <Package className="w-8 h-8 mb-1" />
+                            <Package className="w-7 h-7 mb-1" />
                             <span className="text-[10px] font-medium">No Image</span>
                           </div>
                         )}
@@ -294,7 +321,7 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
                         <span className="text-[13px] font-bold text-zinc-800 group-hover:text-red-600 transition-colors block leading-tight">
                           {child.label}
                         </span>
-                        <span className="text-[10px] text-zinc-500 font-medium group-hover:text-red-500/70 transition-colors flex items-center gap-1">
+                        <span className="text-[10px] text-zinc-500 font-medium group-hover:text-red-500/80 transition-colors flex items-center gap-1">
                           View Details <ChevronRight className="w-2.5 h-2.5" />
                         </span>
                       </div>
@@ -306,28 +333,38 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
                   {/* Left: Support Links */}
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xs font-black text-red-600 uppercase tracking-widest mb-4">Support Channels</h4>
+                      <h4 className="text-xs font-black text-red-600 uppercase tracking-widest mb-4">
+                        Support Channels
+                      </h4>
                       <div className="space-y-2">
                         {[
-                          { icon: LifeBuoy, label: "Technical Assistance", desc: "Machinery maintenance & guides", href: "/support#technical" },
-                          { icon: Headphones, label: "Customer Care", desc: "Order status & inquiries", href: "/support#customer" },
+                          {
+                            icon: LifeBuoy,
+                            label: "Technical Assistance",
+                            desc: "Machinery maintenance & guides",
+                            href: "/support#technical",
+                          },
+                          {
+                            icon: Headphones,
+                            label: "Customer Care",
+                            desc: "Order status & inquiries",
+                            href: "/support#customer",
+                          },
                         ].map((s, i) => (
-                          <Link
-                            key={i}
-                            href={s.href}
-                            onClick={() => setIsOpen(false)}
-                          >
+                          <Link key={i} href={s.href} onClick={() => setIsOpen(false)}>
                             <motion.div
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: i * 0.1 }}
+                              transition={{ delay: i * 0.08 }}
                               className="group flex items-start gap-3 p-3 rounded-2xl hover:bg-zinc-50 transition-colors cursor-pointer border border-transparent hover:border-zinc-100"
                             >
-                              <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition-colors">
+                              <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition-colors shrink-0">
                                 <s.icon className="w-5 h-5 text-red-600 group-hover:text-white transition-colors" />
                               </div>
                               <div>
-                                <p className="text-sm font-bold text-zinc-800 group-hover:text-red-600 transition-colors">{s.label}</p>
+                                <p className="text-sm font-bold text-zinc-800 group-hover:text-red-600 transition-colors">
+                                  {s.label}
+                                </p>
                                 <p className="text-[11px] text-zinc-500 group-hover:text-zinc-600">{s.desc}</p>
                               </div>
                             </motion.div>
@@ -351,7 +388,7 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3 + i * 0.1 }}
+                          transition={{ delay: 0.2 + i * 0.08 }}
                           key={i}
                           className="space-y-1"
                         >
@@ -364,7 +401,7 @@ function DesktopMenuItem({ item, depth = 0 }: { item: NavItem; depth?: number })
                     </div>
                     <div className="mt-6 pt-5 border-t border-zinc-200">
                       <Link prefetch={true} href="/support" onClick={() => setIsOpen(false)}>
-                        <button className="w-full py-2.5 rounded-xl bg-white border border-zinc-200 text-xs font-bold text-zinc-700 hover:bg-zinc-50 hover:border-red-200 hover:text-red-600 transition-all shadow-sm">
+                        <button className="w-full py-2.5 rounded-xl bg-white border border-zinc-200 text-xs font-bold text-zinc-700 hover:bg-zinc-50 hover:border-red-200 hover:text-red-600 transition-all shadow-sm cursor-pointer">
                           View Support Center
                         </button>
                       </Link>
@@ -403,13 +440,14 @@ function MobileMenuItem({
         <Link
           href={item.href}
           onClick={() => setMobileOpen(false)}
-          className={`flex items-center gap-3 w-full text-left px-3 py-2.5 rounded-xl transition-colors ${depth === 0
-            ? "text-base font-bold text-zinc-900 hover:bg-red-50 hover:text-red-600"
-            : "text-sm font-medium text-zinc-600 hover:bg-red-50 hover:text-red-600"
-            }`}
+          className={`flex items-center gap-3 w-full text-left px-3 py-2.5 rounded-xl transition-colors ${
+            depth === 0
+              ? "text-base font-bold text-zinc-900 hover:bg-red-50 hover:text-red-600"
+              : "text-sm font-medium text-zinc-600 hover:bg-red-50 hover:text-red-600"
+          }`}
         >
           {item.image && depth > 0 && (
-            <div className="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden flex-shrink-0 flex items-center justify-center p-1.5 relative">
+            <div className="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden shrink-0 flex items-center justify-center p-1.5 relative">
               <Image
                 src={item.image}
                 alt={item.label}
@@ -419,18 +457,23 @@ function MobileMenuItem({
               />
             </div>
           )}
-          {item.label}
+          <span>{item.label}</span>
         </Link>
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl transition-colors ${depth === 0
-            ? "text-base font-bold text-zinc-900 hover:bg-red-50 hover:text-red-600"
-            : "text-sm font-medium text-zinc-600 hover:bg-red-50 hover:text-red-600"
-            }`}
+          className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl transition-colors cursor-pointer ${
+            depth === 0
+              ? "text-base font-bold text-zinc-900 hover:bg-red-50 hover:text-red-600"
+              : "text-sm font-medium text-zinc-600 hover:bg-red-50 hover:text-red-600"
+          }`}
         >
-          {item.label}
-          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180 text-red-600" : ""}`} />
+          <span>{item.label}</span>
+          <ChevronDown
+            className={`w-4 h-4 shrink-0 transition-transform duration-300 ${
+              isOpen ? "rotate-180 text-red-600" : "text-zinc-400"
+            }`}
+          />
         </button>
       )}
 
@@ -444,7 +487,7 @@ function MobileMenuItem({
               transition={{ duration: 0.25 }}
               className="overflow-hidden"
             >
-              <div className={`ml-3 pl-3 border-l-2 border-red-100 py-1 space-y-1`}>
+              <div className="ml-3 pl-3 border-l-2 border-red-100 py-1 space-y-1">
                 {item.isSupport ? (
                   <div className="space-y-4 py-2">
                     <div className="space-y-2">
@@ -457,9 +500,9 @@ function MobileMenuItem({
                           key={i}
                           href={s.href}
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-3 p-2 rounded-lg bg-zinc-50"
+                          className="flex items-center gap-3 p-2 rounded-lg bg-zinc-50 hover:bg-red-50 transition-colors"
                         >
-                          <s.icon className="w-4 h-4 text-red-600" />
+                          <s.icon className="w-4 h-4 text-red-600 shrink-0" />
                           <span className="text-sm font-medium text-zinc-700">{s.label}</span>
                         </Link>
                       ))}
@@ -490,8 +533,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 15);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -499,25 +542,30 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-        ? "bg-white shadow-[0_2px_32px_rgba(0,0,0,0.1)] border-b border-zinc-100"
-        : "bg-white border-b border-zinc-100"
-        }`}
+      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.06)] border-b border-zinc-100"
+          : "bg-white border-b border-zinc-100"
+      }`}
     >
-      <nav className="max-w-[1400px] mx-auto px-4 lg:px-8 flex items-center justify-between h-20">
+      <nav className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* ── Logo ── */}
-        <Link prefetch={true} href="/" className="flex items-center gap-3 group shrink-0">
-          <div className="w-16 h-16 flex items-center justify-center">
-            <img src="/logo.png" alt="ANFAAS AL AMAL Logo" className="w-full h-full object-contain origin-center" />
+        <Link prefetch={true} href="/" className="flex items-center gap-3 group shrink-0 select-none">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+            <img
+              src="/logo.png"
+              alt="ANFAAS AL AMAL Logo"
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
-          <div className="leading-none">
-            <span className="block text-xl sm:text-2xl font-black tracking-tight text-zinc-900">
+          <div className="flex flex-col justify-center">
+            <span className="block text-xl sm:text-2xl font-black tracking-tight text-zinc-900 leading-tight">
               Anfaas<span className="text-red-600">arabia</span>.com
             </span>
-            <div className="relative h-4 mt-1 flex items-center overflow-hidden min-w-[120px]">
+            <div className="relative h-4 mt-0.5 flex items-center overflow-hidden min-w-[125px]">
               {/* Static Background Text (Light Gray) */}
-              <span className="text-[9px] font-bold tracking-[0.05em] text-zinc-200 uppercase whitespace-nowrap">
+              <span className="text-[9px] font-bold tracking-[0.06em] text-zinc-300 uppercase whitespace-nowrap">
                 Performance That Never Stops
               </span>
 
@@ -525,9 +573,9 @@ export default function Navbar() {
               <motion.div
                 className="absolute inset-y-0 left-0 flex items-center overflow-hidden z-10"
                 animate={{ width: ["0%", "100%", "100%", "0%"] }}
-                transition={{ duration: 15, repeat: Infinity, times: [0, 0.7, 0.9, 1], ease: "linear" }}
+                transition={{ duration: 12, repeat: Infinity, times: [0, 0.7, 0.9, 1], ease: "linear" }}
               >
-                <span className="text-[9px] font-bold tracking-[0.05em] text-red-600 uppercase whitespace-nowrap">
+                <span className="text-[9px] font-bold tracking-[0.06em] text-red-600 uppercase whitespace-nowrap">
                   Performance That Never Stops
                 </span>
               </motion.div>
@@ -536,7 +584,7 @@ export default function Navbar() {
               <motion.div
                 className="absolute top-1/2 -translate-y-1/2 z-20 pointer-events-none flex items-center -translate-x-full"
                 animate={{ left: ["0%", "100%", "100%", "0%"] }}
-                transition={{ duration: 15, repeat: Infinity, times: [0, 0.7, 0.9, 1], ease: "linear" }}
+                transition={{ duration: 12, repeat: Infinity, times: [0, 0.7, 0.9, 1], ease: "linear" }}
               >
                 <div className="w-8 h-[2px] rounded-full bg-gradient-to-r from-transparent to-red-500 blur-[0.5px] opacity-80" />
                 <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_3px_rgba(220,38,38,1)] -ml-1" />
@@ -546,7 +594,7 @@ export default function Navbar() {
         </Link>
 
         {/* ── Desktop Nav ── */}
-        <div className="hidden lg:flex items-center gap-1 xl:gap-2 lg:ml-12 lg:mr-auto">
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2 ml-6 xl:ml-10 mr-auto">
           {navData.map((item, idx) => (
             <DesktopMenuItem key={idx} item={item} />
           ))}
@@ -558,20 +606,19 @@ export default function Navbar() {
             href="https://wa.me/966565301513?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#25D366] text-white shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:bg-[#20bd5a] hover:shadow-[0_6px_24px_rgba(37,211,102,0.45)] transition-all duration-300"
-            whileHover={{ scale: 1.1, rotate: [0, -10, 10, -10, 0] }}
-            transition={{ duration: 0.5 }}
+            className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:bg-[#20bd5a] hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-all duration-300"
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.96 }}
             title="Chat with us on WhatsApp"
           >
-            {/* Pulsing ring */}
-            <span className="absolute inset-0 rounded-xl border border-[#25D366] animate-ping opacity-30" />
+            <span className="absolute inset-0 rounded-xl border border-[#25D366] animate-ping opacity-30 pointer-events-none" />
             <WhatsAppIcon className="w-5 h-5 z-10" />
           </motion.a>
 
           <Link
             href="/#contact"
             id="nav-cta-btn"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 text-white text-sm font-bold shadow-[0_4px_16px_rgba(220,38,38,0.35)] hover:bg-red-700 hover:shadow-[0_6px_24px_rgba(220,38,38,0.45)] hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center justify-center h-10 px-5 rounded-xl bg-red-600 text-white text-sm font-bold shadow-[0_4px_16px_rgba(220,38,38,0.35)] hover:bg-red-700 hover:shadow-[0_6px_22px_rgba(220,38,38,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
           >
             Get in Touch
           </Link>
@@ -579,7 +626,7 @@ export default function Navbar() {
 
         {/* ── Mobile Toggle ── */}
         <button
-          className="lg:hidden p-2 rounded-xl text-zinc-700 hover:bg-zinc-100 transition-colors"
+          className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl text-zinc-700 hover:bg-zinc-100/80 active:bg-zinc-200/60 transition-colors cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -587,8 +634,8 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* ── Red accent line ── */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30" />
+      {/* ── Subtle accent line ── */}
+      <div className="h-[1px] bg-gradient-to-r from-transparent via-red-600/40 to-transparent" />
 
       {/* ── Mobile Menu ── */}
       <AnimatePresence>
@@ -597,20 +644,20 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-zinc-100 shadow-2xl overflow-hidden"
+            transition={{ duration: 0.28, ease: "easeInOut" }}
+            className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-zinc-100 shadow-2xl overflow-hidden"
           >
-            <div className="px-6 py-8 space-y-1 max-h-[85vh] overflow-y-auto custom-scrollbar">
+            <div className="px-5 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
               {navData.map((item, idx) => (
                 <MobileMenuItem key={idx} item={item} setMobileOpen={setMobileOpen} />
               ))}
 
               {/* Mobile CTA */}
-              <div className="pt-6 border-t border-zinc-100 space-y-4 mt-6">
+              <div className="pt-5 border-t border-zinc-100 space-y-3 mt-4">
                 <div className="grid grid-cols-2 gap-3">
                   <a
                     href="tel:+966565301513"
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-zinc-50 text-sm font-bold text-zinc-600 hover:bg-zinc-100 transition-colors"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-zinc-100 text-sm font-bold text-zinc-700 hover:bg-zinc-200 transition-colors"
                   >
                     <Phone className="w-4 h-4 text-red-500" />
                     Call Us
@@ -619,9 +666,8 @@ export default function Navbar() {
                     href="https://wa.me/966565301513?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative overflow-hidden flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#25D366] text-sm font-bold text-white shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:bg-[#20bd5a] transition-all duration-300"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#25D366] text-sm font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:bg-[#20bd5a] transition-all duration-300"
                   >
-                    <span className="absolute inset-0 bg-white/20 animate-pulse opacity-0 hover:opacity-100" />
                     <WhatsAppIcon className="w-4 h-4" />
                     WhatsApp
                   </a>
@@ -629,7 +675,7 @@ export default function Navbar() {
                 <Link
                   href="/#contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center px-5 py-4 rounded-xl bg-red-600 text-white text-base font-bold shadow-[0_8px_24px_rgba(220,38,38,0.25)]"
+                  className="block w-full text-center px-5 py-3.5 rounded-xl bg-red-600 text-white text-sm font-bold shadow-[0_6px_20px_rgba(220,38,38,0.25)] hover:bg-red-700 transition-all"
                 >
                   Get in Touch
                 </Link>
@@ -641,3 +687,4 @@ export default function Navbar() {
     </motion.header>
   );
 }
+

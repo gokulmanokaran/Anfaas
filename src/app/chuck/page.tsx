@@ -10,15 +10,15 @@ import { ArrowRight, Settings } from "lucide-react";
 export const metadata: Metadata = {
   title: "CNC Chuck & Power Chuck Supplier | ANFAAS AL AMAL",
   description:
-    "CNC chuck and manual chuck solutions supplier in Saudi Arabia. We supply 3-jaw power chucks, scroll chucks, collet chucks, and Kitagawa chucks to Dammam, Riyadh, and Jeddah.",
+    "CNC chuck and manual lathe chuck solutions supplier in Saudi Arabia. We supply 3-jaw hydraulic power chucks, scroll chucks, collet chucks, and workholding systems to Dammam, Riyadh, and Jeddah.",
   keywords: [
     "Chuck",
     "CNC Chuck",
-    "Kitagawa Chuck",
-    "Kitagawa",
-    "Machine Tool Accessories",
+    "Lathe Chuck",
     "Power Chuck",
     "3-jaw chuck",
+    "Machine Tool Accessories",
+    "Collet Chuck",
   ],
   alternates: { canonical: "https://anfaasarabia.com/chuck" },
 };
@@ -37,8 +37,8 @@ const faqs = [
     a: "We supply CNC power chucks (hydraulic), manual lathe scroll chucks, independent chucks, collet chucks, magnetic chucks for surface grinding/milling, and a complete range of chuck jaws.",
   },
   {
-    q: "Do you supply Kitagawa chucks?",
-    a: "Yes. Kitagawa is one of the premier workholding brands we supply. You can explore our dedicated Kitagawa brand page for more details.",
+    q: "What chuck sizes and spindle mountings are supported?",
+    a: "We supply chucks with standard A2-5, A2-6, A2-8, and direct-mount spindle connections in sizes ranging from 6-inch to 24-inch diameters for CNC turning centers and conventional lathes.",
   },
   {
     q: "Are the chucks compatible with standard CNC spindle noses?",
@@ -73,10 +73,10 @@ export default function ChuckPage() {
                 Request a Quote <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/brands/kitagawa"
+                href="/machine-tool-accessories"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-100 text-zinc-900 font-bold text-sm hover:bg-zinc-200 transition-all"
               >
-                Kitagawa Chucks
+                Machine Accessories
               </Link>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function ChuckPage() {
               { label: "Tool Holders", href: "/tool-holders" },
               { label: "CNC Tools", href: "/cnc-tools" },
               { label: "Machine Tool Accessories", href: "/machine-tool-accessories" },
-              { label: "Kitagawa", href: "/brands/kitagawa" },
+              { label: "Cutting Tools", href: "/cutting-tools" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-zinc-100 text-zinc-700 text-sm font-medium hover:bg-red-50 hover:text-red-600 transition-colors">
                 {l.label} <ArrowRight className="w-3.5 h-3.5" />

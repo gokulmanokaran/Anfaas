@@ -12,10 +12,13 @@ const links = {
     { label: "Industrial Lubricants", href: "/lubricants" },
     { label: "Material Handling", href: "/mhe" },
   ],
-  Brands: [
-    { label: "Vertex Tooling", href: "/brands/vertex" },
-    { label: "Kitagawa Chucks", href: "/brands/kitagawa" },
-    { label: "Kluber Lubricants", href: "/brands/kluber" },
+  Solutions: [
+    { label: "About Us", href: "/about" },
+    { label: "Machine Tool Accessories", href: "/machine-tool-accessories" },
+    { label: "Industrial Grease", href: "/industrial-grease" },
+    { label: "News & Events", href: "/news" },
+    { label: "Customer Support", href: "/support" },
+    { label: "Contact Us", href: "/contact" },
   ],
   Locations: [
     { label: "Dammam HQ", href: "/locations/dammam" },

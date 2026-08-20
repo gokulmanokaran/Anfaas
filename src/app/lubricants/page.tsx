@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Industrial Grease",
     "Axis Oil",
     "Coolant",
-    "Kluber Lubricants",
+    "Synthetic Lubricants",
     "slideway oil",
   ],
   alternates: { canonical: "https://anfaasarabia.com/lubricants" },

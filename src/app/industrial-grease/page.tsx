@@ -10,12 +10,12 @@ import { ArrowRight, Droplets } from "lucide-react";
 export const metadata: Metadata = {
   title: "Industrial Grease Supplier in Saudi Arabia | ANFAAS AL AMAL",
   description:
-    "High-performance industrial grease supplier in Saudi Arabia. We supply Kluber grease, multi-purpose grease, and machine tool greases to Dammam, Riyadh, and Jeddah.",
+    "High-performance industrial grease supplier in Saudi Arabia. We supply high-speed spindle grease, extreme-pressure bearing grease, and machine tool greases to Dammam, Riyadh, and Jeddah.",
   keywords: [
     "Industrial Grease",
-    "Kluber",
+    "High Speed Spindle Grease",
     "Industrial Lubricants",
-    "Kluber Grease",
+    "EP Bearing Grease",
     "bearings grease",
     "spindle grease",
   ],
@@ -26,17 +26,17 @@ const greases = [
   { name: "Specialty High-Speed Spindle Greases", desc: "Formulated for high-RPM machine spindles, offering low starting resistance and high thermal limits." },
   { name: "Extreme Pressure (EP) Bearing Greases", desc: "For heavy radial loads, shock loads, and high vibration environments in steel mills and manufacturing plants." },
   { name: "High-Temperature Greases", desc: "Maintain grease structure and base oil viscosity in extreme environment operations." },
-  { name: "Kluber Specialty Greases", desc: "High-end industrial greases designed to meet exact machine guidelines. Sourced for peak performance." },
+  { name: "Synthetic High-Load Greases", desc: "Advanced synthetic lubricant formulas engineered to meet demanding OEM machine guidelines and reduce mechanical wear." },
 ];
 
 const faqs = [
   {
     q: "What types of industrial grease do you supply?",
-    a: "We supply multi-purpose EP bearing greases, high-speed CNC spindle greases, high-temperature lubricating greases, and specialty lubricants from international manufacturers.",
+    a: "We supply multi-purpose EP bearing greases, high-speed CNC spindle greases, high-temperature lubricating greases, and specialty lubricants for demanding manufacturing environments.",
   },
   {
-    q: "Do you supply Kluber grease in Saudi Arabia?",
-    a: "Yes. Kluber is one of the premier specialty lubricant brands we supply. You can explore our dedicated Kluber brand page for details.",
+    q: "What temperature and speed ratings do your greases accommodate?",
+    a: "Our industrial greases accommodate temperature ranges from -40°C to over +200°C and high DN-speed values suitable for precision CNC machine spindles and heavy factory gearboxes.",
   },
   {
     q: "How can I select the right grease for my machine bearings?",
@@ -71,10 +71,10 @@ export default function IndustrialGreasePage() {
                 Request a Quote <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/brands/kluber"
+                href="/lubricants"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-100 text-zinc-900 font-bold text-sm hover:bg-zinc-200 transition-all"
               >
-                Kluber Grease
+                Industrial Lubricants
               </Link>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function IndustrialGreasePage() {
           <h2 className="text-xl font-bold text-zinc-900 mb-6">Related Lubricants</h2>
           <div className="flex flex-wrap gap-3">
             {[
-              { label: "Kluber", href: "/brands/kluber" },
+              { label: "Industrial Lubricants", href: "/lubricants" },
               { label: "Axis Oil", href: "/axis-oil" },
               { label: "CNC Coolant", href: "/coolant" },
               { label: "Distilled Water", href: "/distilled-water" },

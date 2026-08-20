@@ -56,22 +56,25 @@ const productCategories = [
   },
 ];
 
-/* ── Brand Data ───────────────────────────────────────── */
-const brands = [
+/* ── Specialized Solutions Data ──────────────────────── */
+const specializedSolutions = [
   {
-    name: "Vertex",
-    description: "Workholding and machine tool accessories.",
-    href: "/brands/vertex",
+    title: "Precision Workholding & Tooling",
+    description: "High-rigidity machine vises, rotary tables, modular clamping kits, and ER collet chuck systems engineered for demanding CNC milling and turning centers.",
+    href: "/machine-tool-accessories",
+    badge: "Workholding",
   },
   {
-    name: "Kitagawa",
-    description: "CNC chuck and precision workholding systems.",
-    href: "/brands/kitagawa",
+    title: "CNC Power & Lathe Chucks",
+    description: "Hydraulic 3-jaw power chucks, precision scroll chucks, rotary hydraulic cylinders, and specialized jaws ensuring optimal gripping force and concentric accuracy.",
+    href: "/chuck",
+    badge: "Chucks",
   },
   {
-    name: "Kluber",
-    description: "Specialty industrial greases and lubricants.",
-    href: "/brands/kluber",
+    title: "High-Performance Industrial Lubrication",
+    description: "Synthetic high-speed spindle greases, extreme-pressure bearing lubricants, slideway oils, and premium cutting fluids formulated to minimize machine downtime.",
+    href: "/industrial-grease",
+    badge: "Lubrication",
   },
 ];
 
@@ -195,34 +198,39 @@ export default function SEOHomepageSection() {
         </div>
       </section>
 
-      {/* ── Brands Section ────────────────────────────── */}
-      <section className="py-20 bg-white" id="brands">
+      {/* ── Specialized Solutions Section ────────────────── */}
+      <section className="py-20 bg-white" id="solutions">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-red-600 mb-2">
+              Engineering Expertise
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 mb-3">
-              Brands We Supply
+              Engineered Industrial Solutions
             </h2>
             <p className="text-zinc-500 text-sm max-w-xl mx-auto">
-              ANFAAS AL AMAL sources from globally recognised industrial brands
-              to deliver quality and reliability to our customers.
+              Delivering high-precision tooling, heavy-duty workholding systems, and industrial lubrication solutions tailored to Saudi Arabian manufacturing requirements.
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
-            {brands.map((brand) => (
+            {specializedSolutions.map((item) => (
               <Link
-                key={brand.href}
-                href={brand.href}
-                className="group flex flex-col items-center text-center bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:border-red-100 hover:bg-red-50/30 transition-all duration-300"
+                key={item.href}
+                href={item.href}
+                className="group flex flex-col justify-between bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:border-red-100 hover:bg-red-50/30 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 rounded-2xl bg-zinc-900 flex items-center justify-center mb-4 group-hover:bg-red-600 transition-colors">
-                  <span className="text-white font-black text-lg">
-                    {brand.name[0]}
-                  </span>
+                <div>
+                  <div className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold bg-white text-zinc-700 border border-zinc-200 mb-4 group-hover:border-red-200 group-hover:text-red-600 transition-colors">
+                    {item.badge}
+                  </div>
+                  <h3 className="font-bold text-lg text-zinc-900 mb-2 group-hover:text-red-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-zinc-500 text-xs leading-relaxed mb-6">{item.description}</p>
                 </div>
-                <h3 className="font-bold text-zinc-900 mb-1 group-hover:text-red-600 transition-colors">
-                  {brand.name}
-                </h3>
-                <p className="text-zinc-500 text-xs">{brand.description}</p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 group-hover:gap-2.5 transition-all">
+                  Explore Solutions <ArrowRight className="w-3.5 h-3.5" />
+                </span>
               </Link>
             ))}
           </div>

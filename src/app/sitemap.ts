@@ -38,11 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/plastic-injection-molding`, lastModified: NOW, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/mhe`, lastModified: NOW, changeFrequency: "monthly", priority: 0.7 },
 
-    // ── Brand Pages ───────────────────────────────────────
-    { url: `${BASE}/brands/vertex`, lastModified: NOW, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/brands/kitagawa`, lastModified: NOW, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/brands/kluber`, lastModified: NOW, changeFrequency: "monthly", priority: 0.8 },
-
     // ── Location Pages ────────────────────────────────────
     { url: `${BASE}/locations/dammam`, lastModified: NOW, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/locations/riyadh`, lastModified: NOW, changeFrequency: "monthly", priority: 0.9 },
