@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "live center",
     "presetter",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/accessories" },
+  alternates: { canonical: "https://www.anfaasarabia.com/accessories" },
 };
 
 const accessoriesData = [

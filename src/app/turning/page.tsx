@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "VTL60",
     "CNC lathe",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/turning" },
+  alternates: { canonical: "https://www.anfaasarabia.com/turning" },
 };
 
 const products = [

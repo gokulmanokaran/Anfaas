@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Measuring Instruments in Riyadh",
     "Industrial Tools Supplier in Riyadh",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/locations/riyadh" },
+  alternates: { canonical: "https://www.anfaasarabia.com/locations/riyadh" },
 };
 
 const localFaqs = [

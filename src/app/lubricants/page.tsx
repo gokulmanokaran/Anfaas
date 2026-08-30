@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Synthetic Lubricants",
     "slideway oil",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/lubricants" },
+  alternates: { canonical: "https://www.anfaasarabia.com/lubricants" },
 };
 
 export default function LubricantsPage() {

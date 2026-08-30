@@ -102,8 +102,8 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ANFAAS AL AMAL",
-  url: "https://anfaasarabia.com",
-  logo: "https://anfaasarabia.com/logo.png",
+  url: "https://www.anfaasarabia.com",
+  logo: "https://www.anfaasarabia.com/logo.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+966-565301513",
@@ -124,7 +124,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "ANFAAS AL AMAL",
-  url: "https://anfaasarabia.com",
+  url: "https://www.anfaasarabia.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.anfaasarabia.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
 };
 
 /* ── Component ────────────────────────────────────────── */

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Measuring Instruments in Jeddah",
     "Industrial Tools Supplier in Jeddah",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/locations/jeddah" },
+  alternates: { canonical: "https://www.anfaasarabia.com/locations/jeddah" },
 };
 
 const localFaqs = [

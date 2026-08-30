@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "vertical machining center",
     "double column machining center",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/milling" },
+  alternates: { canonical: "https://www.anfaasarabia.com/milling" },
 };
 
 const products = [

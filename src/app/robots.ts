@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/under-development", "/api/"],
     },
-    sitemap: "https://anfaasarabia.com/sitemap.xml",
+    sitemap: "https://www.anfaasarabia.com/sitemap.xml",
   };
 }

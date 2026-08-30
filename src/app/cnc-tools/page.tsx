@@ -5,61 +5,85 @@ import CTASection from "@/components/CTASection";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
-import { ArrowRight, Wrench, Settings, Scissors } from "lucide-react";
+import { ArrowRight, Wrench, Settings, Scissors, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "CNC Tools Supplier in Saudi Arabia",
+  title: "CNC Tools & Machining Tooling Supplier | Anfaas Arabia",
   description:
-    "ANFAAS AL AMAL supplies CNC tools for machining centres, turning and milling applications across Saudi Arabia. CNC tool holders, cutting tools, and CNC accessories available for customers in Dammam, Riyadh, and Jeddah. Enquire today.",
+    "CNC tools and machining tooling supplier in Saudi Arabia. ANFAAS AL AMAL supplies milling tools, turning tools, boring heads, tool holders, and CNC accessories to manufacturers in Dammam, Riyadh, and Jeddah.",
   keywords: [
     "CNC tools Saudi Arabia",
+    "CNC tooling supplier",
     "CNC tools Dammam",
-    "CNC tools supplier",
     "CNC cutting tools",
     "CNC machining tools",
+    "milling tools",
+    "turning tools",
+    "boring heads",
     "CNC accessories",
+    "industrial CNC tools",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/cnc-tools" },
+  alternates: { canonical: "https://www.anfaasarabia.com/cnc-tools" },
+};
+
+/* ── JSON-LD Schema ─────────────────────────────────── */
+const cncToolsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "CNC Tools & Machining Tooling Solutions",
+  description: "ANFAAS AL AMAL CNC milling, turning, boring, and tooling systems for Saudi Arabian manufacturing facilities.",
+  url: "https://www.anfaasarabia.com/cnc-tools",
+  numberOfItems: 6,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "CNC Milling Tools & End Mills" },
+    { "@type": "ListItem", position: 2, name: "CNC Turning Tools & Boring Bars" },
+    { "@type": "ListItem", position: 3, name: "Precision Adjustable Boring Heads" },
+    { "@type": "ListItem", position: 4, name: "CNC Tool Holders & Collet Chucks" },
+    { "@type": "ListItem", position: 5, name: "Indexable Carbide Cutting Inserts" },
+    { "@type": "ListItem", position: 6, name: "CNC Machine Tool Accessories & Presetters" },
+  ],
 };
 
 const relatedLinks = [
   { label: "Tool Holders", href: "/tool-holders" },
   { label: "Cutting Tools", href: "/cutting-tools" },
-  { label: "Chuck", href: "/chuck" },
+  { label: "CNC Chucks", href: "/chuck" },
   { label: "Machine Tool Accessories", href: "/machine-tool-accessories" },
+  { label: "Measuring Instruments", href: "/measuring-instruments" },
   { label: "CNC Coolant", href: "/coolant" },
+  { label: "All Tools", href: "/tools-supplier" },
 ];
 
 const faqs = [
   {
     q: "What CNC tools does ANFAAS AL AMAL supply?",
-    a: "We supply a range of CNC tools including milling tools, turning tools, boring heads, drilling tools, cutting inserts, tool holders, and CNC machine accessories suitable for various machining centre brands.",
+    a: "We supply a complete suite of CNC tooling including solid carbide and indexable milling cutters, turning tools, boring heads, vibration-damped boring bars, tool holders (ER, hydraulic, shrink-fit), cutting inserts, and workholding accessories.",
   },
   {
-    q: "What industries use CNC tools?",
-    a: "CNC tools are used in manufacturing, petrochemical, automotive, aerospace, defence, oil & gas equipment production, and general metalworking industries — all of which are active sectors in Saudi Arabia.",
+    q: "What CNC machine types and brands are compatible with your tooling?",
+    a: "Our tooling is engineered to fit standard machine tapers (BT30, BT40, BT50, HSK, CAT, ISO) and standard tool posts, making it compatible with major CNC machining centres, turning centres, and multi-axis mill-turn machines.",
   },
   {
-    q: "Do you supply CNC tools in Dammam?",
-    a: "Yes. ANFAAS AL AMAL is based in Dammam's Industrial District and supplies CNC tools directly to customers in the Eastern Province.",
+    q: "What industries use CNC tools supplied by ANFAAS AL AMAL?",
+    a: "Our CNC tools serve the petrochemical, oil & gas equipment, aerospace, automotive, defense, structural fabrication, mold and die, and general precision engineering sectors across Saudi Arabia.",
   },
   {
-    q: "Do you supply CNC tools in Riyadh?",
-    a: "Yes. We supply CNC tools and machine accessories to customers in Riyadh. Contact us to discuss your requirements and we will arrange supply.",
+    q: "Do you supply CNC tools across Dammam, Riyadh, and Jeddah?",
+    a: "Yes. Headquartered in Dammam's Industrial District, we provide prompt dispatch and technical tooling support to manufacturers in Dammam, Riyadh, Jeddah, and all industrial cities in Saudi Arabia.",
   },
   {
-    q: "Do you supply CNC tools in Jeddah?",
-    a: "Yes. We supply CNC tools to customers in Jeddah. Contact our team via email, phone, or WhatsApp to request a quotation.",
-  },
-  {
-    q: "How can I request a quotation for CNC tools?",
-    a: "Contact us at info@anfaasarabia.com or call/WhatsApp +966 565301513. You can also use the enquiry form on our website and our team will respond within one business day.",
+    q: "How can I request a customized CNC tooling quotation?",
+    a: "You can submit an inquiry via our website form, email info@anfaasarabia.com, or call/WhatsApp +966 565301513. Our technical team responds within 24 hours.",
   },
 ];
 
 export default function CNCToolsPage() {
   return (
     <main className="min-h-screen bg-white flex flex-col pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cncToolsSchema) }}
+      />
       <Navbar />
       <Breadcrumb items={[{ label: "CNC Tools", href: "/cnc-tools" }]} />
 
@@ -79,9 +103,9 @@ export default function CNCToolsPage() {
               <br />in Saudi Arabia
             </h1>
             <p className="text-lg text-zinc-600 leading-relaxed mb-8 max-w-2xl">
-              ANFAAS AL AMAL supplies precision CNC tools for industrial machining applications
-              across Saudi Arabia. From milling and turning tools to boring heads and cutting inserts,
-              we stock the tooling that keeps your CNC machines performing at their best.
+              ANFAAS AL AMAL supplies high-performance CNC tools for industrial machining applications
+              across Saudi Arabia. From milling and turning tools to precision boring heads and cutting inserts,
+              we stock the tooling that keeps your CNC machines operating at peak productivity.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -106,10 +130,10 @@ export default function CNCToolsPage() {
       <section className="py-20 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 mb-3">
-            CNC Tools for Industrial Applications
+            CNC Tools for Industrial Machining Applications
           </h2>
           <p className="text-zinc-500 text-sm mb-10 max-w-2xl leading-relaxed">
-            Our CNC tooling range covers the key categories required for modern CNC machining centres,
+            Our CNC tooling portfolio covers all key tooling systems required for modern CNC machining centres,
             turning centres, and milling machines.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -117,33 +141,33 @@ export default function CNCToolsPage() {
               {
                 icon: Wrench,
                 title: "Milling Tools",
-                desc: "End mills, face mills, and indexable milling cutters for vertical and horizontal machining centres.",
+                desc: "Solid carbide end mills, face mills, and indexable milling cutters for vertical and horizontal CNC machining centres.",
               },
               {
                 icon: Wrench,
-                title: "Turning Tools",
-                desc: "Turning inserts, boring bars, and external turning tools for CNC lathes and turning centres.",
+                title: "Turning Tools & Boring Bars",
+                desc: "External turning tool holders, profiling bars, and internal boring bars for CNC lathes and turning centres.",
               },
               {
                 icon: Scissors,
-                title: "Cutting Inserts",
-                desc: "Carbide and coated cutting inserts for high-speed and hard-material machining operations.",
+                title: "Carbide Cutting Inserts",
+                desc: "High-grade carbide and coated cutting inserts for high-speed, heavy-feed, and hard-material machining operations.",
               },
               {
                 icon: Settings,
-                title: "Tool Holders",
-                desc: "Collet chucks, milling chucks, and shrink-fit tool holders for CNC machine spindles.",
+                title: "Tool Holders & Collet Chucks",
+                desc: "ER collet chucks, hydraulic milling chucks, shrink-fit holders, and face mill arbors for standard CNC machine tapers.",
                 href: "/tool-holders",
               },
               {
                 icon: Settings,
-                title: "Boring Heads & Tools",
-                desc: "Precision boring heads and boring bars for accurate hole-making in CNC machining centres.",
+                title: "Precision Boring Heads",
+                desc: "Micron-adjustable boring heads and vibration-damped boring bars for high-tolerance hole finishing.",
               },
               {
                 icon: Settings,
-                title: "CNC Accessories",
-                desc: "Tool presetters, edge finders, and workholding accessories for CNC machine setup.",
+                title: "CNC Accessories & Workholding",
+                desc: "Tool presetters, machine vises, rotary tables, and clamping fixtures for rapid CNC machine setup.",
                 href: "/machine-tool-accessories",
               },
             ].map((item) => {
@@ -170,16 +194,45 @@ export default function CNCToolsPage() {
         </div>
       </section>
 
-      {/* Related Products */}
+      {/* ── Key Advantages ───────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-zinc-900 mb-6">Related Products</h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100">
+              <Zap className="w-8 h-8 text-red-600 mb-4" />
+              <h3 className="font-bold text-zinc-900 text-base mb-2">High Productivity</h3>
+              <p className="text-zinc-600 text-xs leading-relaxed">
+                Optimized cutting geometries and high-rigidity tool bodies allow aggressive machining parameters that shorten cycle times.
+              </p>
+            </div>
+            <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100">
+              <ShieldCheck className="w-8 h-8 text-red-600 mb-4" />
+              <h3 className="font-bold text-zinc-900 text-base mb-2">Consistent Tool Life</h3>
+              <p className="text-zinc-600 text-xs leading-relaxed">
+                Premium carbide substrates and advanced wear-resistant coatings ensure predictable tool life, reducing unexpected tool breakages.
+              </p>
+            </div>
+            <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100">
+              <Settings className="w-8 h-8 text-red-600 mb-4" />
+              <h3 className="font-bold text-zinc-900 text-base mb-2">Comprehensive Tooling Range</h3>
+              <p className="text-zinc-600 text-xs leading-relaxed">
+                One-stop industrial supply covering everything from the machine spindle to the cutting edge and workholding fixture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
+      <section className="py-16 bg-zinc-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-zinc-900 mb-6">Related CNC Tooling &amp; Products</h2>
           <div className="flex flex-wrap gap-3">
             {relatedLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-zinc-100 text-zinc-700 text-sm font-medium hover:bg-red-50 hover:text-red-600 transition-colors"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-zinc-200 text-zinc-700 text-sm font-medium hover:bg-red-50 hover:text-red-600 hover:border-red-100 transition-colors"
               >
                 {l.label} <ArrowRight className="w-3.5 h-3.5" />
               </Link>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const SITE_NAME = "ANFAAS AL AMAL";
-const BASE_URL = "https://anfaasarabia.com";
+const BASE_URL = "https://www.anfaasarabia.com";
 
 export function buildMetadata({
   title,

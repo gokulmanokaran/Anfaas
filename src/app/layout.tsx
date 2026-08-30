@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anfaasarabia.com"),
+  metadataBase: new URL("https://www.anfaasarabia.com"),
   title: {
     default: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     template: "%s | ANFAAS AL AMAL",
@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     "ANFAAS AL AMAL supplies industrial tools, CNC tools, machine tool accessories, measuring instruments, cutting tools, and lubricants across Saudi Arabia – Dammam, Riyadh, and Jeddah.",
   keywords: [
     "ANFAAS AL AMAL",
+    "industrial machinery and tooling supplier",
+    "CNC tooling supplier",
     "tools supplier Saudi Arabia",
     "CNC tools",
     "machine tool accessories",
@@ -39,6 +41,7 @@ export const metadata: Metadata = {
     title: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     description:
       "ANFAAS AL AMAL supplies CNC tools, machine tool accessories, measuring instruments, cutting tools and lubricants across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com",
     type: "website",
     locale: "en_SA",
     siteName: "ANFAAS AL AMAL",
@@ -48,6 +51,9 @@ export const metadata: Metadata = {
     title: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     description:
       "ANFAAS AL AMAL supplies CNC tools, machine tool accessories, measuring instruments and cutting tools across Saudi Arabia.",
+  },
+  alternates: {
+    canonical: "https://www.anfaasarabia.com",
   },
   robots: {
     index: true,

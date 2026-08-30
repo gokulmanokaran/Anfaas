@@ -24,7 +24,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       position: idx + 1,
       name: item.label,
-      item: `https://anfaasarabia.com${item.href}`,
+      item: `https://www.anfaasarabia.com${item.href}`,
     })),
   };
 

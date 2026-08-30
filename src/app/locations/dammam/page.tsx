@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "Measuring Instruments in Dammam",
     "Industrial Tools Supplier in Dammam",
   ],
-  alternates: { canonical: "https://anfaasarabia.com/locations/dammam" },
+  alternates: { canonical: "https://www.anfaasarabia.com/locations/dammam" },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "ANFAAS AL AMAL",
-  image: "https://anfaasarabia.com/logo.png",
+  image: "https://www.anfaasarabia.com/logo.png",
   telephone: "+966565301513",
   email: "info@anfaasarabia.com",
   address: {
@@ -36,7 +36,7 @@ const localBusinessSchema = {
     addressRegion: "Eastern Province",
     addressCountry: "SA",
   },
-  url: "https://anfaasarabia.com/locations/dammam",
+  url: "https://www.anfaasarabia.com/locations/dammam",
   areaServed: ["Dammam", "Eastern Province"],
 };
 
