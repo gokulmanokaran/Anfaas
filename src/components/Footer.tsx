@@ -114,9 +114,12 @@ export default function Footer() {
       <div className="h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent" />
 
       {/* Bottom bar */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
         <p className="text-xs text-zinc-600">
           © {new Date().getFullYear()} AnfaasArabia. All rights reserved.
+        </p>
+        <p className="text-xs text-zinc-500 font-medium">
+          Design and developed by <span className="text-zinc-400 font-semibold">DIC</span>
         </p>
         <div className="flex items-center gap-5">
           {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((l) => (
