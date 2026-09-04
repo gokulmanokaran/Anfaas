@@ -118,8 +118,13 @@ export default function Footer() {
         <p className="text-xs text-zinc-600">
           © {new Date().getFullYear()} AnfaasArabia. All rights reserved.
         </p>
-        <p className="text-xs text-zinc-500 font-medium">
-          Design and developed by <span className="text-zinc-400 font-semibold">DIC</span>
+        <p className="text-xs text-zinc-500 font-medium flex items-center justify-center md:justify-start gap-1.5">
+          <span>Design and developed by</span>
+          <img
+            src="https://res.cloudinary.com/yrkokpqe/image/upload/f_auto,q_auto/DIC"
+            alt="DIC"
+            className="h-7 w-auto object-contain inline-block"
+          />
         </p>
         <div className="flex items-center gap-5">
           {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((l) => (
