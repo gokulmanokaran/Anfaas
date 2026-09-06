@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: "How can I request a customized CNC tooling quotation?",
-    a: "You can submit an inquiry via our website form, email info@anfaasarabia.com, or call/WhatsApp +966 565301513. Our technical team responds within 24 hours.",
+    a: "You can submit an inquiry via our website form, email info@anfaasarabia.com, or call/WhatsApp +966 549186135. Our technical team responds within 24 hours.",
   },
 ];
 

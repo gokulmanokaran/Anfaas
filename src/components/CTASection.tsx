@@ -99,11 +99,11 @@ export default function CTASection() {
                     <span className="text-sm font-medium">info@anfaasarabia.com</span>
                   </a>
                   <a
-                    href="tel:+966565301513"
+                    href="tel:+966549186135"
                     className="flex items-center gap-3 text-zinc-300 hover:text-red-400 transition-colors duration-200"
                   >
                     <Phone className="w-5 h-5 text-red-500" />
-                    <span className="text-sm font-medium">+966 565301513</span>
+                    <span className="text-sm font-medium">+966 549186135</span>
                   </a>
                 </div>
               </div>

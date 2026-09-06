@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "How can I request a quotation for tools?",
-    a: "Contact us via the enquiry form on our website, by email at info@anfaasarabia.com, or by phone/WhatsApp at +966 565301513. Our team will respond within one business day.",
+    a: "Contact us via the enquiry form on our website, by email at info@anfaasarabia.com, or by phone/WhatsApp at +966 549186135. Our team will respond within one business day.",
   },
 ];
 

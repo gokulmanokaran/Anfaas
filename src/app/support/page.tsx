@@ -113,7 +113,7 @@ export default function SupportPage() {
 
                   <div className="pt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                     <a
-                      href="tel:+966565301513"
+                      href="tel:+966549186135"
                       className="group flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-red-600 text-white font-bold text-[13px] shadow-lg shadow-red-600/20 hover:bg-red-700 transition-all"
                     >
                       <Phone className="w-4 h-4" />

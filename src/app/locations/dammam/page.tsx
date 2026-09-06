@@ -27,7 +27,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "ANFAAS AL AMAL",
   image: "https://www.anfaasarabia.com/logo.png",
-  telephone: "+966565301513",
+  telephone: "+966549186135",
   email: "info@anfaasarabia.com",
   address: {
     "@type": "PostalAddress",
@@ -91,7 +91,7 @@ export default function DammamLocationPage() {
               </div>
               <div className="flex items-start gap-3 text-sm text-zinc-600">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
-                <span><strong>Phone / WhatsApp:</strong> +966 565301513</span>
+                <span><strong>Phone / WhatsApp:</strong> +966 549186135</span>
               </div>
               <div className="flex items-start gap-3 text-sm text-zinc-600">
                 <Mail className="w-5 h-5 text-red-600 shrink-0" />

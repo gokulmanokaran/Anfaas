@@ -603,7 +603,7 @@ export default function Navbar() {
         {/* ── Right CTA ── */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
           <motion.a
-            href="https://wa.me/966565301513?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
+            href="https://wa.me/966549186135?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:bg-[#20bd5a] hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-all duration-300"
@@ -656,14 +656,14 @@ export default function Navbar() {
               <div className="pt-5 border-t border-zinc-100 space-y-3 mt-4">
                 <div className="grid grid-cols-2 gap-3">
                   <a
-                    href="tel:+966565301513"
+                    href="tel:+966549186135"
                     className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-zinc-100 text-sm font-bold text-zinc-700 hover:bg-zinc-200 transition-colors"
                   >
                     <Phone className="w-4 h-4 text-red-500" />
                     Call Us
                   </a>
                   <a
-                    href="https://wa.me/966565301513?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
+                    href="https://wa.me/966549186135?text=Hello%20AnfaasArabia,%20I%20would%20like%20to%20inquire%20about%20your%20products."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#25D366] text-sm font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:bg-[#20bd5a] transition-all duration-300"

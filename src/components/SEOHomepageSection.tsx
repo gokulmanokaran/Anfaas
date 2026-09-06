@@ -106,7 +106,7 @@ const orgSchema = {
   logo: "https://www.anfaasarabia.com/logo.png",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+966-565301513",
+    telephone: "+966-549186135",
     contactType: "sales",
     areaServed: "SA",
     availableLanguage: ["English", "Arabic"],
