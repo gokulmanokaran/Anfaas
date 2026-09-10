@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     title: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     description:
       "ANFAAS AL AMAL supplies CNC tools, machine tool accessories, measuring instruments, cutting tools and lubricants across Saudi Arabia.",
-    url: "https://www.anfaasarabia.com",
     type: "website",
     locale: "en_SA",
     siteName: "ANFAAS AL AMAL",
@@ -51,9 +50,6 @@ export const metadata: Metadata = {
     title: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     description:
       "ANFAAS AL AMAL supplies CNC tools, machine tool accessories, measuring instruments and cutting tools across Saudi Arabia.",
-  },
-  alternates: {
-    canonical: "https://www.anfaasarabia.com",
   },
   robots: {
     index: true,

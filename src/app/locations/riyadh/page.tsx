@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     "Industrial Tools Supplier in Riyadh",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/locations/riyadh" },
+  openGraph: {
+    title: "Tools & CNC Tools Supplier in Riyadh | ANFAAS AL AMAL",
+    description:
+      "Industrial tools & CNC tools supplier in Riyadh. Sourcing and delivering tool holders, cutting tools, measuring instruments, and lubricants to manufacturers in Riyadh Industrial Cities.",
+    url: "https://www.anfaasarabia.com/locations/riyadh",
+  },
 };
 
 const localFaqs = [

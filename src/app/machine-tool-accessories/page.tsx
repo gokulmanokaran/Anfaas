@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     "industrial machine tool accessories",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/machine-tool-accessories" },
+  openGraph: {
+    title: "Machine Tool Accessories & CNC Workholding Supplier | Anfaas Arabia",
+    description:
+      "Machine tool accessories and CNC workholding supplier in Saudi Arabia. ANFAAS AL AMAL supplies machine vises, precision rotary tables, clamping kits, lathe live centres, and magnetic chucks to Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/machine-tool-accessories",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

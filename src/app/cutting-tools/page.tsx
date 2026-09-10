@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     "metal cutting tools",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/cutting-tools" },
+  openGraph: {
+    title: "Industrial Cutting Tools Supplier in Saudi Arabia | Anfaas Arabia",
+    description:
+      "High-performance industrial cutting tools supplier in Saudi Arabia. ANFAAS AL AMAL supplies solid carbide end mills, indexable turning and milling inserts, drills, taps, and reamers to manufacturers in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/cutting-tools",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

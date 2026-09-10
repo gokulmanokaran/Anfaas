@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     "HSK tool holders",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/tool-holders" },
+  openGraph: {
+    title: "Precision CNC Tool Holders Supplier in Saudi Arabia | Anfaas Arabia",
+    description:
+      "Precision CNC tool holders supplier in Saudi Arabia. ANFAAS AL AMAL supplies ER collet chucks, hydraulic holders, side-lock Weldon holders, shrink-fit holders, face mill arbors, and pull studs across Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/tool-holders",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "machine tool lubricants",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/industrial-grease" },
+  openGraph: {
+    title: "Industrial Grease & Spindle Lubricants Supplier | Anfaas Arabia",
+    description:
+      "Industrial grease and high-speed CNC spindle lubricant supplier in Saudi Arabia. ANFAAS AL AMAL supplies high-RPM spindle greases, EP bearing greases, high-temperature synthetic greases, and specialty lubricants to Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/industrial-grease",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

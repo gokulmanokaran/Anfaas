@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "anti-stick slip oil",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/axis-oil" },
+  openGraph: {
+    title: "CNC Axis Oil & Slideway Lubricants Supplier | Anfaas Arabia",
+    description:
+      "Axis oil and CNC slideway lubricants supplier in Saudi Arabia. ANFAAS AL AMAL supplies ISO VG 32, 68, and 220 way oils, spindle oils, and hydraulic lubricants to machine shops in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/axis-oil",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

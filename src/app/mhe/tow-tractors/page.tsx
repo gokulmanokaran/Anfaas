@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Electric Tow Tractors | ANFAAS AL AMAL",
+  description:
+    "Heavy duty electric tow tractors for horizontal towing operations in industrial manufacturing and logistics hubs across Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/tow-tractors",
+  },
+  openGraph: {
+    title: "Electric Tow Tractors | ANFAAS AL AMAL",
+    description:
+      "Heavy duty electric tow tractors for horizontal towing operations in industrial manufacturing and logistics hubs across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/tow-tractors",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     "lathe workholding",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/chuck" },
+  openGraph: {
+    title: "CNC Chuck & Lathe Chuck Supplier in Saudi Arabia | Anfaas Arabia",
+    description:
+      "CNC chuck and lathe chuck supplier in Saudi Arabia. ANFAAS AL AMAL supplies 3-jaw hydraulic power chucks, manual scroll chucks, 4-jaw independent chucks, collet chucks, and chuck jaws to Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/chuck",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

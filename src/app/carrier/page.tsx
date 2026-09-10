@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Careers | ANFAAS AL AMAL – Join Our Team",
   description:
     "Explore career opportunities at ANFAAS AL AMAL. Join our team of industrial professionals and help power industrial excellence across the region.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/carrier",
+  },
+  openGraph: {
+    title: "Careers | ANFAAS AL AMAL – Join Our Team",
+    description:
+      "Explore career opportunities at ANFAAS AL AMAL. Join our team of industrial professionals and help power industrial excellence across the region.",
+    url: "https://www.anfaasarabia.com/carrier",
+  },
 };
 
 const perks = [

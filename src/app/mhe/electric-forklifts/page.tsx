@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Electric Forklifts | ANFAAS AL AMAL",
+  description:
+    "Powerful electric counterbalance forklifts built for indoor and outdoor operations. High load capacity, long battery life, and zero emissions across Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/electric-forklifts",
+  },
+  openGraph: {
+    title: "Electric Forklifts | ANFAAS AL AMAL",
+    description:
+      "Powerful electric counterbalance forklifts built for indoor and outdoor operations. High load capacity, long battery life, and zero emissions across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/electric-forklifts",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

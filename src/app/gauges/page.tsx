@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     "industrial quality control Saudi Arabia",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/gauges" },
+  openGraph: {
+    title: "Industrial & Precision Gauges Supplier | Anfaas Arabia",
+    description:
+      "Precision industrial gauges supplier in Saudi Arabia. ANFAAS AL AMAL supplies digital height gauges, dial indicators, bore gauges, thread plug & ring gauges, and gauge blocks to Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/gauges",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

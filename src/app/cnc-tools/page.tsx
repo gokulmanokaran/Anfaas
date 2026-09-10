@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "industrial CNC tools",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/cnc-tools" },
+  openGraph: {
+    title: "CNC Tools & Machining Tooling Supplier | Anfaas Arabia",
+    description:
+      "CNC tools and machining tooling supplier in Saudi Arabia. ANFAAS AL AMAL supplies milling tools, turning tools, boring heads, tool holders, and CNC accessories to manufacturers in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/cnc-tools",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

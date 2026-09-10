@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     "CNC lathe",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/turning" },
+  openGraph: {
+    title: "CNC Turning Centers & Solutions | ANFAAS AL AMAL",
+    description:
+      "Explore our advanced CNC turning solutions and vertical/horizontal lathes designed for precision, efficiency, and heavy duty industrial metal cutting. Supplying Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/turning",
+  },
 };
 
 const products = [

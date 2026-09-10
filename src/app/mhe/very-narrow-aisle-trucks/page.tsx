@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Very Narrow Aisle (VNA) Trucks | ANFAAS AL AMAL",
+  description:
+    "Precision VNA trucks for maximum storage density and high-bay racking operations across Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/very-narrow-aisle-trucks",
+  },
+  openGraph: {
+    title: "Very Narrow Aisle (VNA) Trucks | ANFAAS AL AMAL",
+    description:
+      "Precision VNA trucks for maximum storage density and high-bay racking operations across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/very-narrow-aisle-trucks",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     "high purity water",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/distilled-water" },
+  openGraph: {
+    title: "Industrial Distilled Water Supplier in Saudi Arabia | Anfaas Arabia",
+    description:
+      "High-purity industrial distilled water supplier in Saudi Arabia. ANFAAS AL AMAL supplies distilled water for CNC coolant dilution, lead-acid battery maintenance, and chemical rinsing across Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/distilled-water",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

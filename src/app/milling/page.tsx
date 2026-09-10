@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     "double column machining center",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/milling" },
+  openGraph: {
+    title: "CNC Milling Centers & Solutions | ANFAAS AL AMAL",
+    description:
+      "Explore our advanced CNC milling solutions designed for precision, efficiency, and exceptional performance. We supply 5-axis, double column, and vertical machining centers across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/milling",
+  },
 };
 
 const products = [

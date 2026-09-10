@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     "industrial tooling supplier",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/tools-supplier" },
+  openGraph: {
+    title: "Tool Holders & CNC Tooling Supplier | Anfaas Arabia",
+    description:
+      "ANFAAS AL AMAL is a trusted CNC tooling and tool holders supplier in Saudi Arabia. We supply ER collet chucks, hydraulic holders, side-lock holders, boring heads, face mill arbors, pull studs, and customized tooling solutions to manufacturers in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/tools-supplier",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

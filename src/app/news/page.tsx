@@ -1,7 +1,23 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, Calendar, ChevronRight } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "News & Events | ANFAAS AL AMAL",
+  description:
+    "Stay updated with the latest news, product launches, and industry insights from ANFAAS AL AMAL in Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/news",
+  },
+  openGraph: {
+    title: "News & Events | ANFAAS AL AMAL",
+    description:
+      "Stay updated with the latest news, product launches, and industry insights from ANFAAS AL AMAL in Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/news",
+  },
+};
 
 const newsItems = [
   {

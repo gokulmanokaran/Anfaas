@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "industrial coolant supplier",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/coolant" },
+  openGraph: {
+    title: "CNC Coolant & Industrial Metalworking Fluids | Anfaas Arabia",
+    description:
+      "Industrial CNC coolant and metalworking fluids supplier in Saudi Arabia. ANFAAS AL AMAL supplies water-soluble cutting coolants, semi-synthetic fluids, neat cutting oils, and synthetic grinding fluids to Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/coolant",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

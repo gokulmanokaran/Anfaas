@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     "Industrial Tools Supplier in Dammam",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/locations/dammam" },
+  openGraph: {
+    title: "Tools & CNC Tools Supplier in Dammam | ANFAAS AL AMAL",
+    description:
+      "ANFAAS AL AMAL is a leading industrial tools & CNC tools supplier in Dammam. We supply collets, tool holders, cutting tools, and machine lubricants directly to Dammam Industrial District factories.",
+    url: "https://www.anfaasarabia.com/locations/dammam",
+  },
 };
 
 const localBusinessSchema = {

@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Electric Stackers | ANFAAS AL AMAL",
+  description:
+    "Versatile pedestrian and rider electric stackers for warehouse pallet stacking, rack loading, and transport across Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/stackers",
+  },
+  openGraph: {
+    title: "Electric Stackers | ANFAAS AL AMAL",
+    description:
+      "Versatile pedestrian and rider electric stackers for warehouse pallet stacking, rack loading, and transport across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/stackers",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     "industrial measuring instruments",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/measuring-instruments" },
+  openGraph: {
+    title: "Measuring Instruments & Tool Presetters | Anfaas Arabia",
+    description:
+      "Precision measuring instruments and tool presetters supplier in Saudi Arabia. ANFAAS AL AMAL supplies CNC tool presetters, digital calipers, micrometers, height gauges, and dial indicators to manufacturers in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/measuring-instruments",
+  },
 };
 
 /* ── JSON-LD Schema ─────────────────────────────────── */

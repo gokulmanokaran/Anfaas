@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Autonomous Mobile Robots (AMR) | ANFAAS AL AMAL",
+  description:
+    "Next-generation autonomous mobile robots that navigate dynamically, adapt to changing environments, and collaborate safely with human workers in Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/amr",
+  },
+  openGraph: {
+    title: "Autonomous Mobile Robots (AMR) | ANFAAS AL AMAL",
+    description:
+      "Next-generation autonomous mobile robots that navigate dynamically, adapt to changing environments, and collaborate safely with human workers in Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/amr",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

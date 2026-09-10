@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.anfaasarabia.com/",
   },
+  openGraph: {
+    title: "Industrial Machinery & Tooling Supplier in Saudi Arabia | ANFAAS AL AMAL",
+    description:
+      "ANFAAS AL AMAL is a leading industrial machinery and CNC tooling supplier in Saudi Arabia. We supply tool holders, cutting tools, measuring instruments, machine accessories, and lubricants to manufacturers in Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/",
+  },
 };
 
 export default function Home() {

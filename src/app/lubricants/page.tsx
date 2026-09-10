@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "slideway oil",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/lubricants" },
+  openGraph: {
+    title: "High-Performance Industrial Lubricants & Greases | ANFAAS AL AMAL",
+    description:
+      "Maximize your machinery's potential with high-performance industrial oils, way lubricants, axis oils, and specialty greases. Supplying Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/lubricants",
+  },
 };
 
 export default function LubricantsPage() {

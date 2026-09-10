@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import MHEPageTemplate from "@/components/MHEPageTemplate";
+
+export const metadata: Metadata = {
+  title: "Order Pickers | ANFAAS AL AMAL",
+  description:
+    "Low and high level electric order pickers designed for fast, ergonomic picking in modern distribution centers across Saudi Arabia.",
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/mhe/order-pickers",
+  },
+  openGraph: {
+    title: "Order Pickers | ANFAAS AL AMAL",
+    description:
+      "Low and high level electric order pickers designed for fast, ergonomic picking in modern distribution centers across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/mhe/order-pickers",
+  },
+};
 
 const data = {
   category: "Material Handling Equipments",

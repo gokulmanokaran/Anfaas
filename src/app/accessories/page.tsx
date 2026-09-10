@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     "presetter",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/accessories" },
+  openGraph: {
+    title: "Machine Tool Accessories & Industrial Accessories | ANFAAS AL AMAL",
+    description:
+      "Explore our comprehensive range of high-precision industrial accessories designed to enhance your manufacturing capabilities. Supplying Dammam, Riyadh, and Jeddah.",
+    url: "https://www.anfaasarabia.com/accessories",
+  },
 };
 
 const accessoriesData = [

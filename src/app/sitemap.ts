@@ -6,12 +6,13 @@ const NOW = new Date();
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     // ── Core ──────────────────────────────────────────────
-    { url: BASE, lastModified: NOW, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE}/`, lastModified: NOW, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/products`, lastModified: NOW, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/about`, lastModified: NOW, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: NOW, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/support`, lastModified: NOW, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/news`, lastModified: NOW, changeFrequency: "weekly", priority: 0.5 },
+    { url: `${BASE}/carrier`, lastModified: NOW, changeFrequency: "monthly", priority: 0.6 },
 
     // ── CNC & Industrial Tooling SEO Landing Pages ────────
     { url: `${BASE}/tools-supplier`, lastModified: NOW, changeFrequency: "weekly", priority: 0.95 },

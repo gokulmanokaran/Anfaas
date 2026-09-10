@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     "Industrial Tools Supplier in Jeddah",
   ],
   alternates: { canonical: "https://www.anfaasarabia.com/locations/jeddah" },
+  openGraph: {
+    title: "Tools & CNC Tools Supplier in Jeddah | ANFAAS AL AMAL",
+    description:
+      "Industrial tools & CNC tools supplier in Jeddah. We deliver collet chucks, milling cutters, thread gauges, and machine oil to factory operators in Jeddah Industrial Zone.",
+    url: "https://www.anfaasarabia.com/locations/jeddah",
+  },
 };
 
 const localFaqs = [
