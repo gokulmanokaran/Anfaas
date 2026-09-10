@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "anfaasarabia.com" }],
+      "destination": "https://www.anfaasarabia.com/$1",
+      "permanent": true
+    }
+  ]
+}
