@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     url: "https://www.anfaasarabia.com/batteries/3pzb210",
   },
 };
-//
 
 export default function Battery3PzB210Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
