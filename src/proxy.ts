@@ -5,7 +5,7 @@ export function proxy(request: NextRequest) {
   const host = request.headers.get("host") || "";
   const hostname = host.split(":")[0].toLowerCase();
 
-  // Redirect non-WWW (anfaasarabia.com) to WWW (www.anfaasarabia.com)
+  // Permanently 301 redirect non-WWW (anfaasarabia.com) to WWW (www.anfaasarabia.com)
   if (hostname === "anfaasarabia.com") {
     const url = request.nextUrl.clone();
     url.host = "www.anfaasarabia.com";

@@ -37,10 +37,14 @@ export const metadata: Metadata = {
     "Riyadh",
     "Jeddah",
   ],
+  alternates: {
+    canonical: "https://www.anfaasarabia.com/",
+  },
   openGraph: {
     title: "Industrial Tools & CNC Tools Supplier in Saudi Arabia | ANFAAS AL AMAL",
     description:
       "ANFAAS AL AMAL supplies CNC tools, machine tool accessories, measuring instruments, cutting tools and lubricants across Saudi Arabia.",
+    url: "https://www.anfaasarabia.com/",
     type: "website",
     locale: "en_SA",
     siteName: "ANFAAS AL AMAL",
